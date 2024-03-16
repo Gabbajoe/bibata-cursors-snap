@@ -3,4 +3,4 @@
 store/
 deb/
 *.snap
-
+.vscode/*
