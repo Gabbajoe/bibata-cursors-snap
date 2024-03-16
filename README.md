@@ -11,18 +11,38 @@ All credit goes to the original cursor developers of the KDE project and the pac
 ## Building the snap locally
 
 Requirements
-* [snapcraft](https://snapcraft.io/snapcraft) (```snap install snapcraft```)
+* [snapcraft](https://snapcraft.io/snapcraft) (```snap install snapcraft --classic```)
 * [multipass](https://snapcraft.io/multipass) (```snap install multipass```)
 
+1. Clone the repository and enter the directory
 ```sh
 git clone https://github.com/jollygoose/oxygen-cursors-snap
 cd oxygen-cursors-snap
+```
 
+2. Build the snap
+```
 snapcraft
+```
 
-# where CURRENT is the latest version of oxygen-cursors
-# and --dangerous since this local snap hasn't been verified
-snap install oxygen-cursors_CURRENT_all.snap --dangerous
+(Optional) Two snaps packages will be built, one for the `amd64` architecture, and for `arm64`. If only building for a single local system, you can comment out the uneeded architecture in the snapcraft.yaml file. The build is pretty quick and files relatively small ~4MB so skipping this will be fine.
+```
+architectures:
+  - build-on: [arm64, amd64] # remove for amd64 only
+    build-for: [arm64] # remove for amd64 only
+  - build-on: [arm64, amd64] # remove for arm64 only
+    build-for: [amd64] # remove for arm64 only
+```
+
+3. Install the snap. If you run an `ls -lh` from the build directory (`oxygen-cursors-snap`), there should see two files (or one if the optional step was taken). Using the below command, install the snap for the system's architecture. If unsure of the 
+architecture, check by using `uname -m`. If it outputs `aarch64` using `arm64`. If it says `x86_64` then use `amd64`.
+
+*Note: the `--dangerous` flag is used because this is local snap that hasn't been verified through the snap store [more details here](https://snapcraft.io/docs/install-modes#heading--dangerous)*
+```
+# arm64 system install 
+snap install oxygen-cursors_0.0.2012-06-kde4.8-2.1ubuntu1_arm64.snap --dangerous
+# amd64 system install
+snap install oxygen-cursors_0.0.2012-06-kde4.8-2.1ubuntu1_amd64.snap --dangerous
 ```
 
 ## Applying the theme

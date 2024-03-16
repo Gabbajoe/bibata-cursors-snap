@@ -1,12 +1,15 @@
 ---
 name: oxygen-cursors
 version: 0.0.2012-06-kde4.8-2.1ubuntu1
-base: core18
+base: core22
 license: GPL-3.0
 grade: stable
 confinement: strict
 architectures:
-  - all
+  - build-on: [arm64, amd64]
+    build-for: [arm64]
+  - build-on: [arm64, amd64]
+    build-for: [amd64]
 summary: Oxygen Cursor Theme
 description: |
   This snap contains the Oxygen Cursor Theme (both oxygen-cursor-theme
@@ -55,6 +58,7 @@ slots:
         - $SNAP/share/icons/oxy-terra
         - $SNAP/share/icons/oxy-obsidian
         - $SNAP/share/icons/oxy-emerald
+# package mirror hub location for future reference: https://packages.ubuntu.com/noble/all/oxygen-cursor-theme-extra/download
 parts:
   cursors:
     plugin: dump
