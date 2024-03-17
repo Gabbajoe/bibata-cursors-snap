@@ -1,3 +1,6 @@
+
+[![oxygen-cursors](https://snapcraft.io/oxygen-cursors/badge.svg)](https://snapcraft.io/oxygen-cursors)[![oxygen-cursors-snap workflow](https://github.com/jollygoose/oxygen-cursors-snap/actions/workflows/main.yml/badge.svg)](https://github.com/jollygoose/oxygen-cursors-snap/actions/workflows/main.yml)
+
 Snap of the Oxygen cursor themes (from both the oxygen-cursor-theme and oxygen-cursor-theme-extra packages) originally created for KDE 4.
 
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/oxygen-cursors)
