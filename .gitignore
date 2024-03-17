@@ -4,3 +4,4 @@ store/
 deb/
 *.snap
 .vscode/*
+screens/*
