@@ -1,6 +1,6 @@
 ---
 name: bibata-modern-ice-cursor
-version: '2.0.6'
+version: '2.0.7'
 base: core22
 license: GPL-3.0
 grade: stable
